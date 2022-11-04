@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body class="container" style="background-color: #DEDEDE;">
+    <section class="card card-body mt-5">
+        <h1>Listar Produtos</h1>
+        <hr>
+
+        <div>
+            <label for="">Quantidade por páginas</label>
+            <select onchange="buscarProdutos(0)" name="" id="select_limit">
+                <option>10</option>
+                <option>20</option>
+                <option>30</option>
+                <option>40</option>
+            </select>
+        </div>
+
+        <table class="table table-hover table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>#ID</th>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Preço</th>
+                    <th>Tamanho</th>
+                </tr>
+            </thead>
+            <tbody id="tabela_produtos">
+
+            </tbody>
+        </table>
+
+        <div class="text-end">
+            <button onclick="buscarProdutos(0)" class="btn btn-outline-dark">1</button>
+            <button onclick="buscarProdutos(1)" class="btn btn-outline-dark">2</button>
+            <button onclick="buscarProdutos(2)" class="btn btn-outline-dark">3</button>
+        </div>
+
+    </section>    
+
+    <script src="js/index.js"></script>
+</body>
+</html>
